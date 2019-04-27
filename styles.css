@@ -99,11 +99,11 @@ a, a:visited, a:hover, a:active {
     font-weight: 400;
 }
 
-.socials {
+.icon-tray {
     display: flex;
 }
 
-.socials a {
+.icon-tray a {
     font-size: 1.3em;
     margin-right: 1em;
 }
