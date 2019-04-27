@@ -31,7 +31,6 @@
     /* border: 1px solid; */
     font-size: 100%;
     font: inherit;
-    color: #121312;
 }
 
 body {
@@ -42,8 +41,10 @@ body {
     flex-direction: column;
 }
 
-a {
+/* Override a:-webkit-any-link */
+a, a:visited, a:hover, a:active {
     text-decoration: none;
+    color: inherit;
 }
 
 .navbar {
@@ -54,7 +55,7 @@ a {
     background: #FAFAFA;
     font-family: 'Space Mono', monospace;
     font-weight: 400;
-    text-decoration: none;
+    color: #121312;
 }
 
 .logo::before {
@@ -71,6 +72,10 @@ a {
     padding: .3em;
 }
 
+.navbar__menu a:hover {
+    text-decoration: underline;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -83,4 +88,25 @@ a {
     font-size: 3em;
     font-weight: 800;
     text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: #222831;
+    padding: 1em;
+    color: white;
+    text-align: center;
+}
+
+.footer p+p {
+    padding-top: .5em;
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+.heart {
+    color: #f67280;
 }
