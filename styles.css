@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
 @font-face {
     font-family: 'Manrope';
     font-style: normal;
@@ -10,12 +11,6 @@
     font-style: normal;
     font-weight: 500;
     src: url('assets/fonts/manrope-medium.woff') format('woff');
-}
-@font-face {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    src: url('assets/fonts/manrope-regular.woff') format('woff');
 }
 @font-face {
     font-family: 'Manrope';
@@ -34,11 +29,10 @@
 }
 
 body {
-    background: #FF5D26;
-    font-family: 'Manrope', sans-serif;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #FF5D26;
+    min-height: 100vh;
 }
 
 /* Override a:-webkit-any-link */
@@ -47,14 +41,23 @@ a, a:visited, a:hover, a:active {
     color: inherit;
 }
 
+/* === utilities === */
+
+.mg-v-1 {
+    margin: 1em 0;
+}
+
+
+/* === HOME === */
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.2em 1.5em;
-    background: #FAFAFA;
+    background: white;
     font-family: 'Space Mono', monospace;
-    font-weight: 400;
+    text-align: center;
     color: #121312;
 }
 
@@ -76,27 +79,42 @@ a, a:visited, a:hover, a:active {
     text-decoration: underline;
 }
 
-.content {
+.content--home {
     display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    padding: 0 2em 0 2em;
+    padding: 0 1.5em;
 }
 
 .title {
+    font-family: 'Manrope', sans-serif;
     font-size: 3em;
     font-weight: 800;
-    text-align: center;
+}
+
+.subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.socials {
+    display: flex;
+}
+
+.socials a {
+    font-size: 1.3em;
+    margin-right: 1em;
 }
 
 .footer {
     display: flex;
     flex-direction: column;
     background: #222831;
-    padding: 1em;
+    padding: 1.5em;
+    font-family: 'Manrope', sans-serif;
     color: white;
-    text-align: center;
 }
 
 .footer p+p {
