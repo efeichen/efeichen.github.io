@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
 @font-face {
     font-family: 'Manrope';
     font-style: normal;
@@ -28,6 +28,19 @@
     }
 }
 
+:root {
+    --bg-color: rgb(255, 93, 38);
+    /* Each var is a RGB value for complex calcs */
+    --text-color-R: 34;
+    --text-color-G: 40;
+    --text-color-B: 49;
+    --text-color: rgb(
+        var(--text-color-R),
+        var(--text-color-G),
+        var(--text-color-B)
+    );
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -40,8 +53,19 @@
 body {
     display: flex;
     flex-direction: column;
-    background: #FF5D26;
+    background: var(--bg-color);
     min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+}
+
+h1 {
+    margin-bottom: .3em;
+}
+
+h2, p {
+    margin-bottom: 1em;
+    line-height: 2;
 }
 
 /* Override a:-webkit-any-link */
@@ -52,15 +76,7 @@ a, a:visited, a:hover, a:active {
 
 /* === utilities === */
 
-.mg-v-1 {
-    margin: 1em 0;
-}
 
-/* Fill element inside parent */
-.fill {
-    width: 100%;
-    height: auto; 
- }
 
 /* === layouts === */
 
@@ -76,8 +92,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .container {
-    padding: 1.5em;
-    color: #222831;
+    padding: 2em 1.5em;
 }
 
 .container--flexbox {
@@ -117,7 +132,7 @@ a, a:visited, a:hover, a:active {
     display: inline-block;
     width: 10px;
     height: 1rem;
-    background: #222831;
+    background: var(--text-color);
     margin-left: 5px;
     animation: cursor 1s infinite;
 }
@@ -131,8 +146,24 @@ a, a:visited, a:hover, a:active {
     margin-right: 1em;
 }
 
-.footer p+p {
-    padding-top: .5em;
+/* Property on class selector in case HTML element not img */
+.img {
+    display: block;
+}
+
+.portrait--about {
+    position: relative;
+    top: 30px;
+    z-index: -1;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0.5em 2em rgba(7,29,63,0.4);
+}
+
+.footer span+span {
+    margin-top: .5em;
 }
 
 .footer a {
@@ -146,7 +177,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .logo:hover {
-    color: #FF5D26;
+    color: var(--bg-color);
     transition: color .3s;
 }
 
@@ -164,4 +195,13 @@ a, a:visited, a:hover, a:active {
 
 .heart {
     color: #f67280;
+}
+
+.text--shadow-inverse {
+    --text-color-inverse: rgb(
+        calc(255 - var(--text-color-R)),
+        calc(255 - var(--text-color-G)),
+        calc(255 - var(--text-color-B))
+    );
+    text-shadow: var(--text-color-inverse) 4px -4px;
 }
