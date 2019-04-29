@@ -56,6 +56,11 @@ a, a:visited, a:hover, a:active {
     margin: 1em 0;
 }
 
+/* Fill element inside parent */
+.fill {
+    width: 100%;
+    height: auto; 
+ }
 
 /* === layouts === */
 
