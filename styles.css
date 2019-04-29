@@ -57,7 +57,7 @@ a, a:visited, a:hover, a:active {
 }
 
 
-/* === HOME === */
+/* === layouts === */
 
 .navbar {
     display: flex;
@@ -70,14 +70,28 @@ a, a:visited, a:hover, a:active {
     color: #222831;
 }
 
-.logo {
-    font-style: italic;
+.container {
+    padding: 1.5em;
+    color: #222831;
 }
 
-.logo:hover {
-    color: #FF5D26;
-    transition: color .3s;
+.container--flexbox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
 }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: #222831;
+    padding: 1.5em;
+    font-family: 'Manrope', sans-serif;
+    color: white;
+}
+
+/* === components === */
 
 .navbar__menu a {
     padding: .3em;
@@ -85,27 +99,6 @@ a, a:visited, a:hover, a:active {
 
 .navbar__menu a:hover {
     text-decoration: underline;
-}
-
-.content--home {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-    padding: 0 1.5em;
-    color: #222831;
-}
-
-.title {
-    font-family: 'Manrope', sans-serif;
-    font-size: 3em;
-    font-weight: 800;
-}
-
-.subtitle {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.3em;
-    font-weight: 400;
 }
 
 .cli::before {
@@ -133,21 +126,35 @@ a, a:visited, a:hover, a:active {
     margin-right: 1em;
 }
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    background: #222831;
-    padding: 1.5em;
-    font-family: 'Manrope', sans-serif;
-    color: white;
-}
-
 .footer p+p {
     padding-top: .5em;
 }
 
 .footer a {
     text-decoration: underline;
+}
+
+/* === texts === */
+
+.logo {
+    font-style: italic;
+}
+
+.logo:hover {
+    color: #FF5D26;
+    transition: color .3s;
+}
+
+.title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3em;
+    font-weight: 400;
 }
 
 .heart {
