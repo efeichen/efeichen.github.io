@@ -75,9 +75,16 @@ h2, p {
     line-height: 2;
 }
 
+b {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
 /* Override a:-webkit-any-link */
 a, a:visited, a:hover, a:active {
-    text-decoration: none;
     color: inherit;
 }
 
@@ -98,6 +105,14 @@ a, a:visited, a:hover, a:active {
     color: #222831;
 }
 
+.container--h-pad {
+    padding: 0 1.5em;
+}
+
+.container--v-pad {
+    padding: 2em 0;
+}
+
 .container {
     padding: 2em 1.5em;
 }
@@ -107,6 +122,13 @@ a, a:visited, a:hover, a:active {
     flex-direction: column;
     flex: 1;
     justify-content: center;
+}
+
+.container--article {
+    background: white;
+    padding: 1em 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .footer {
@@ -122,6 +144,7 @@ a, a:visited, a:hover, a:active {
 
 .navbar__menu a {
     padding: .3em;
+    text-decoration: none;
 }
 
 .navbar__menu a:hover {
@@ -173,14 +196,11 @@ a, a:visited, a:hover, a:active {
     margin-top: .5em;
 }
 
-.footer a {
-    text-decoration: underline;
-}
-
 /* === texts === */
 
 .logo {
     font-style: italic;
+    text-decoration: none;
 }
 
 .logo:hover {
@@ -199,6 +219,8 @@ a, a:visited, a:hover, a:active {
     font-size: 1.3em;
     font-weight: 400;
 }
+
+
 
 .heart {
     color: #f67280;
