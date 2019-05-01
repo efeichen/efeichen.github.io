@@ -29,6 +29,8 @@
 }
 
 :root {
+    --color-dark: #222831;
+    --color-light: white;
     --bg-color: rgb(255, 93, 38);
     /* Each var is a RGB value for complex calcs */
     --text-color-R: 34;
@@ -94,15 +96,23 @@ a, a:visited, a:hover, a:active {
 
 /* === layouts === */
 
+.navbar, .container--article {
+    background: var(--color-light);
+    color: var(--color-dark);
+}
+
+.footer {
+    background: var(--color-dark);
+    color: var(--color-light);
+}
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.2em 1.5em;
-    background: white;
     font-family: 'Space Mono', monospace;
     text-align: center;
-    color: #222831;
 }
 
 .container--h-pad {
@@ -125,7 +135,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .container--article {
-    background: white;
     padding: 1em 1.5em;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -134,10 +143,8 @@ a, a:visited, a:hover, a:active {
 .footer {
     display: flex;
     flex-direction: column;
-    background: #222831;
     padding: 1.5em;
     font-family: 'Manrope', sans-serif;
-    color: white;
 }
 
 /* === components === */
