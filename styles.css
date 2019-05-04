@@ -92,11 +92,13 @@ a, a:visited, a:hover, a:active {
 
 /* === utilities === */
 
-
+.mg-y {
+    margin: 2em 0;
+}
 
 /* === layouts === */
 
-.navbar, .container--article {
+.navbar {
     background: var(--color-light);
     color: var(--color-dark);
 }
@@ -115,16 +117,14 @@ a, a:visited, a:hover, a:active {
     text-align: center;
 }
 
-.container--h-pad {
-    padding: 0 1.5em;
-}
 
-.container--v-pad {
-    padding: 2em 0;
+/* Questionable naming */
+.container--head {
+    margin: 0 1.5em;
 }
 
 .container {
-    padding: 2em 1.5em;
+    margin: 2em 1.5em;
 }
 
 .container--flexbox {
@@ -132,12 +132,6 @@ a, a:visited, a:hover, a:active {
     flex-direction: column;
     flex: 1;
     justify-content: center;
-}
-
-.container--article {
-    padding: 1em 1.5em;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .footer {
@@ -150,7 +144,7 @@ a, a:visited, a:hover, a:active {
 /* === components === */
 
 .navbar__menu a {
-    padding: .3em;
+    margin: .3em;
     text-decoration: none;
 }
 
@@ -199,7 +193,36 @@ a, a:visited, a:hover, a:active {
     box-shadow: 0 0.5em 2em rgba(7,29,63,0.4);
 }
 
-.footer span+span {
+.card {
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background: var(--color-light);
+    color: var(--color-dark);
+    overflow: hidden;
+}
+
+.card + .card {
+    margin-top: 2em;
+}
+
+.card--article {
+    padding: 1em 1.5em;
+}
+
+.card--showcase {
+
+}
+
+.showcase__img {
+    background: grey;
+    height: 140px;
+}
+
+.showcase__content {
+    padding: 1em 1.5em;
+}
+
+.footer span + span {
     margin-top: .5em;
 }
 
