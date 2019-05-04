@@ -210,7 +210,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .card--showcase {
-
+    margin: 0 .7em;
 }
 
 .showcase__img {
