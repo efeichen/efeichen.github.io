@@ -68,7 +68,73 @@ body {
     }
 }
 
-h1, .title {
+/* === layouts === */
+
+.container {
+    margin: 2em 1.5em;
+}
+
+/* container--flexbox-column?? */
+.container--flexbox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+.navbar {
+    background: var(--color-light);
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2em 1.5em;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+}
+
+.footer {
+    background: var(--color-dark);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    font-family: 'Manrope', sans-serif;
+}
+
+@media only screen and (min-width: 568px) {
+    .navbar {
+        padding: 1.2em 3em;
+    }
+
+    .container {
+        margin: 3em;
+    }
+
+    .footer {
+        padding: 1.5em 3em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        padding: 1.2em 5em;
+    }
+
+    .container {
+        margin: 5em;
+    }
+
+    .footer {
+        padding: 1.5em 5em;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* === modules === */
+
+h1 {
     font-family: 'Manrope', sans-serif;
     font-size: 3em;
     font-weight: 800;
@@ -80,7 +146,7 @@ h2, p {
     line-height: 2;
 }
 
-h2, .subtitle {
+h2, .sub {
     font-family: 'Space Mono', monospace;
     font-size: 1.3em;
     font-weight: 400;
@@ -99,71 +165,41 @@ a, a:visited, a:hover, a:active {
     color: inherit;
 }
 
+.text--shadow-inverse {
+    --text-color-inverse: rgb(
+        calc(255 - var(--text-color-R)),
+        calc(255 - var(--text-color-G)),
+        calc(255 - var(--text-color-B))
+    );
+    text-shadow: var(--text-color-inverse) 4px -4px;
+}
+
 img {
     display: block;
     margin: 0 auto;
 }
 
-/* === utilities === */
-
-.mg-y {
-    margin: 2em 0;
-}
-
-/* === layouts === */
-
-.navbar {
-    background: var(--color-light);
-    color: var(--color-dark);
-}
-
-.footer {
-    background: var(--color-dark);
-    color: var(--color-light);
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.2em 1.5em;
-    font-family: 'Space Mono', monospace;
-    text-align: center;
-}
-
-
-/* Questionable naming */
-.container--head {
-    margin: 0 1.5em;
-}
-
-.container {
-    margin: 2em 1.5em;
-}
-
-.container--flexbox {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-}
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5em;
-    font-family: 'Manrope', sans-serif;
-}
-
-/* === components === */
-
 .navbar__menu a {
-    margin: .3em;
+    margin-left: .5em;
     text-decoration: none;
 }
 
 .navbar__menu a:hover {
     text-decoration: underline;
+}
+
+.logo {
+    font-style: italic;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: var(--bg-color);
+    transition: color .3s;
+}
+
+.title--hero, .sub--hero {
+    margin-bottom: 48px;
 }
 
 .cli::before {
@@ -187,8 +223,12 @@ img {
 }
 
 .icon-tray a {
-    font-size: 1.3em;
+    font-size: calc(1.3em + 1vw);
     margin-right: 1em;
+}
+
+.heart {
+    color: #f67280;
 }
 
 .img--about {
@@ -208,6 +248,7 @@ img {
     background: var(--color-light);
     color: var(--color-dark);
     overflow: hidden;
+    margin: 2em 0;
 }
 
 .card + .card {
@@ -219,7 +260,7 @@ img {
 }
 
 .card--showcase {
-    margin: 0 .7em;
+    margin: 2em .7em;
 }
 
 .showcase__img {
@@ -254,27 +295,29 @@ img {
     margin-top: .5em;
 }
 
-/* === texts === */
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 5em;
+    }
 
-.logo {
-    font-style: italic;
-    text-decoration: none;
-}
+    h2, .sub {
+        font-size: 2em;
+    }
 
-.logo:hover {
-    color: var(--bg-color);
-    transition: color .3s;
-}
+    .navbar__menu a {
+        margin-left: 2em;
+    }
 
-.heart {
-    color: #f67280;
-}
+    .title--hero, .sub--hero {
+        margin-bottom: 80px;
+    }    
 
-.text--shadow-inverse {
-    --text-color-inverse: rgb(
-        calc(255 - var(--text-color-R)),
-        calc(255 - var(--text-color-G)),
-        calc(255 - var(--text-color-B))
-    );
-    text-shadow: var(--text-color-inverse) 4px -4px;
+    .cli::after {
+        width: 15px;
+        height: 2rem;
+    }
+
+    .footer span + span {
+        margin: 0;
+    }
 }
