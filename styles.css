@@ -102,7 +102,7 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
-@media only screen and (min-width: 568px) {
+@media only screen and (min-width: 570px) {
     .navbar {
         padding: 1.2em 3em;
     }
@@ -295,6 +295,12 @@ img {
     margin-top: .5em;
 }
 
+@media only screen and (min-width: 570px) {
+    .navbar__menu a {
+        margin-left: 2em;
+    }
+}
+
 @media only screen and (min-width: 1024px) {
     h1 {
         font-size: 5em;
@@ -303,11 +309,7 @@ img {
     h2, .sub {
         font-size: 2em;
     }
-
-    .navbar__menu a {
-        margin-left: 2em;
-    }
-
+    
     .title--hero, .sub--hero {
         margin-bottom: 80px;
     }    
