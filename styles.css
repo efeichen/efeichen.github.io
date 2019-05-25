@@ -41,6 +41,9 @@
         var(--text-color-G),
         var(--text-color-B)
     );
+
+    /* For future changes */
+    --margin-side: calc(1.5em + 2vw);
 }
 
 * {
@@ -68,7 +71,7 @@ body {
     }
 }
 
-/* === layouts === */
+/* === LAYOUTS === */
 
 .container {
     margin: 2em 1.5em;
@@ -132,11 +135,11 @@ body {
     }
 }
 
-/* === modules === */
+/* === MODULES === */
 
 h1 {
     font-family: 'Manrope', sans-serif;
-    font-size: 3em;
+    font-size: calc(2.5em + 2vw);
     font-weight: 800;
     margin-bottom: .3em;
 }
@@ -233,9 +236,10 @@ img {
 
 .img--about {
     position: relative;
-    top: 30px;
+    top: calc(30px + 1.5vw);
     z-index: -1;
     width: 70%;
+    max-width: 600px;
     height: auto;
     margin: 0 auto;
     border-radius: 10px;
@@ -248,7 +252,7 @@ img {
     background: var(--color-light);
     color: var(--color-dark);
     overflow: hidden;
-    margin: 2em 0;
+    margin: 2em auto;
 }
 
 .card + .card {
@@ -257,15 +261,11 @@ img {
 
 .card--article {
     padding: 1em 1.5em;
+    max-width: 570px;
 }
 
 .card--showcase {
     margin: 2em .7em;
-}
-
-.showcase__img {
-    background: var(--color-dark);
-    height: 140px;
 }
 
 .showcase__img img {
@@ -309,14 +309,14 @@ img {
     h2, .sub {
         font-size: 2em;
     }
-    
+
     .title--hero, .sub--hero {
         margin-bottom: 80px;
     }    
 
     .cli::after {
         width: 15px;
-        height: 2rem;
+        height: 1.5rem;
     }
 
     .footer span + span {
