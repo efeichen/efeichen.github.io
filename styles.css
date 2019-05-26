@@ -49,7 +49,6 @@
     margin: 0;
     padding: 0;
     /* border: 1px solid; */
-    font-size: 100%;
     font: inherit;
 }
 
@@ -59,6 +58,7 @@ body {
     background: var(--bg-color);
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
     color: var(--text-color);
 }
 
@@ -117,8 +117,11 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+    body {
+        font-size: 1.1em;
+    }
+
     .footer {
-        padding: 1.5em var(--space-side);
         flex-direction: row;
         justify-content: space-between;
     }
@@ -207,6 +210,8 @@ img {
 .cli::after {
     content: '';
     display: inline-block;
+    width: calc(10px + .2vw);
+    height: calc(10px + 1vw);
     background: var(--text-color);
     margin-left: .5em;
     animation: cursor 1s infinite;
@@ -296,12 +301,6 @@ img {
     .title--hero, .sub--hero {
         margin: 0 0 80px 0;
     }    
-
-    /* Need fix */
-    .cli::after {
-        width: 15px;
-        height: 1.5rem;
-    }
 
     .footer span + span {
         margin: 0;
