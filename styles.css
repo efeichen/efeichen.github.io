@@ -41,7 +41,7 @@
         var(--text-color-G),
         var(--text-color-B)
     );
-    --space-side: calc(1em + 4vw);
+    --space-side: calc(1rem + 4vw);
 }
 
 * {
@@ -72,7 +72,7 @@ body {
 /* === LAYOUTS === */
 
 .container {
-    margin: 2em var(--space-side);
+    margin: 2rem var(--space-side);
 }
 
 .container--auto {
@@ -101,7 +101,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.2em var(--space-side);
+    padding: 1.2rem var(--space-side);
     font-family: 'Space Mono', monospace;
     text-align: center;
 }
@@ -112,7 +112,7 @@ body {
     color: var(--color-light);
     display: flex;
     flex-direction: column;
-    padding: 1.5em var(--space-side);
+    padding: 1.2rem var(--space-side);
     font-family: 'Manrope', sans-serif;
 }
 
@@ -176,7 +176,7 @@ img {
 }
 
 .navbar__menu a {
-    margin-left: .5em;
+    margin-left: .5rem;
     text-decoration: none;
 }
 
@@ -207,10 +207,8 @@ img {
 .cli::after {
     content: '';
     display: inline-block;
-    width: 10px;
-    height: 1rem;
     background: var(--text-color);
-    margin-left: 5px;
+    margin-left: .5em;
     animation: cursor 1s infinite;
 }
 
@@ -236,7 +234,7 @@ img {
     height: auto;
     margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 0 0.5em 2em rgba(7,29,63,0.4);
+    box-shadow: 0 0.5rem 2rem rgba(7,29,63,0.4);
 }
 
 .card {
@@ -245,11 +243,11 @@ img {
     background: var(--color-light);
     color: var(--color-dark);
     overflow: hidden;
-    margin: 2em auto;
+    margin: 2rem auto;
 }
 
 .card + .card {
-    margin-top: 2em;
+    margin-top: 2rem;
 }
 
 .card--article {
@@ -290,7 +288,7 @@ img {
 
 @media only screen and (min-width: 570px) {
     .navbar__menu a {
-        margin-left: 2em;
+        margin-left: 3rem;
     }
 }
 
