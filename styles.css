@@ -140,7 +140,7 @@ h2, p {
 
 h2, .sub {
     font-family: 'Space Mono', monospace;
-    font-size: calc(.7em + 1.5vw);
+    font-size: calc(1em + 1vw);
     font-weight: 400;
 }
 
