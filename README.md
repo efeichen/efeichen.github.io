@@ -6,7 +6,7 @@ I’ve attempted to make my own website several times in the past. Most of them 
 
 ## Software/Tools Used
 
-Added this section for beginners. Because I want the development of this website to be a good practice, the majority of the code is plain HTML, CSS, and JS. The only external libraries used (as of May 2019) are [Font Awesome]([https://fontawesome.com](https://fontawesome.com/)) and [Typed.js](https://mattboldt.com/demos/typed-js/).
+Added this section for beginners. Because I want the development of this website to be a good practice, the majority of the code is plain HTML, CSS, and JS. The only external libraries used (as of May 2019) are [Font Awesome](https://fontawesome.com) and [Typed.js](https://mattboldt.com/demos/typed-js/).
 
 Notable software used:
 
