@@ -72,11 +72,23 @@ body {
 /* === LAYOUTS === */
 
 .container {
-    margin: 2rem var(--space-side);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .container--auto {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container--side {
+    margin-left: var(--space-side);
+    margin-right: var(--space-side);
+}
+
+.container--side-thin {
+    margin-left: calc(.7rem + 2vw);
+    margin-right: calc(.7rem + 2vw);
 }
 
 .container--flex {
@@ -251,17 +263,19 @@ img {
     margin: 2rem auto;
 }
 
-.card + .card {
-    margin-top: 2rem;
-}
-
 .card--article {
-    padding: 1em 1.5em;
+    padding: 1em var(--space-side);
     max-width: 550px;
 }
 
 .card--showcase {
-    margin: 2em .7em;
+    margin: 2rem auto;
+    max-width: 430px;
+}
+
+.card--showcase a {
+    outline: none;
+    text-decoration: none;
 }
 
 .showcase__img img {
@@ -274,14 +288,12 @@ img {
 }
 
 .showcase__title {
-    font-family: 'Manrope', sans-serif;
     font-weight: 500;
     font-size: 1.5em;
     margin-bottom: 1em;
 }
 
 .showcase__sub {
-    font-family: 'Space Mono', monospace;
     font-weight: 400;
     font-size: 1em;
     margin: 0;
