@@ -20,20 +20,23 @@
             </nav>
         </nav>
     </header>
-    <!-- Use CSS Grid here; Use details & summary for modals -->
-    <main>
-        <header class="container">
+    <!-- TODO: Use details & summary for modals -->
+    <main class="container--main">
+        <header class="container container--side">
             <h1>WORK</h1>
         </header>
-        <section class="card card--showcase">
-            <figure class="showcase__img">
-                <img src="assets/images/mavo.png" alt="">
-            </figure>
-            <section class="showcase__content">
-                <!-- Make font-size more responsive (hopefully w/o media-queries) -->
-                <h1 class="showcase__title">Mavo Google Drive</h1>
-                <h2 class="showcase__sub">Google Drive backend plugin for Mavo using Drive REST API</h2>
-            </section>
+        <section class="container--side-thin container--flex">
+            <article class="card card--showcase">
+                <a href="https://github.com/efeichen/mavo-gdrive">
+                    <figure class="showcase__img">
+                        <img src="assets/images/mavo.png" alt="logo of Mavo">
+                    </figure>
+                    <section class="showcase__content">
+                        <h1 class="showcase__title">Mavo Google Drive</h1>
+                        <h2 class="showcase__sub">Google Drive backend plugin for Mavo using Drive REST API</h2>
+                    </section>
+                </a>
+            </article>
         </section>
     </main>
     <footer class="footer">
