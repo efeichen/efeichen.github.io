@@ -41,9 +41,7 @@
         var(--text-color-G),
         var(--text-color-B)
     );
-
-    /* For future changes */
-    --margin-side: calc(1.5em + 2vw);
+    --space-side: calc(1em + 4vw);
 }
 
 * {
@@ -74,15 +72,27 @@ body {
 /* === LAYOUTS === */
 
 .container {
-    margin: 2em 1.5em;
+    margin: 2em var(--space-side);
 }
 
-/* container--flexbox-column?? */
-.container--flexbox {
+.container--auto {
+    margin: 0 auto;
+}
+
+.container--flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.container--flex-col {
     display: flex;
     flex-direction: column;
-    flex: 1;
     justify-content: center;
+}
+
+.container--main {
+    flex: 1;
 }
 
 .navbar {
@@ -91,45 +101,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.2em 1.5em;
+    padding: 1.2em var(--space-side);
     font-family: 'Space Mono', monospace;
     text-align: center;
 }
 
+/* May need further work w/ flexbox */
 .footer {
     background: var(--color-dark);
     color: var(--color-light);
     display: flex;
     flex-direction: column;
-    padding: 1.5em;
+    padding: 1.5em var(--space-side);
     font-family: 'Manrope', sans-serif;
 }
 
-@media only screen and (min-width: 570px) {
-    .navbar {
-        padding: 1.2em 3em;
-    }
-
-    .container {
-        margin: 3em;
-    }
-
-    .footer {
-        padding: 1.5em 3em;
-    }
-}
-
 @media only screen and (min-width: 1024px) {
-    .navbar {
-        padding: 1.2em 5em;
-    }
-
-    .container {
-        margin: 5em;
-    }
-
     .footer {
-        padding: 1.5em 5em;
+        padding: 1.5em var(--space-side);
         flex-direction: row;
         justify-content: space-between;
     }
@@ -139,19 +128,19 @@ body {
 
 h1 {
     font-family: 'Manrope', sans-serif;
-    font-size: calc(2.5em + 2vw);
+    font-size: calc(2em + 4vw);
     font-weight: 800;
-    margin-bottom: .3em;
+    margin: .3em 0;
 }
 
 h2, p {
-    margin-bottom: 1em;
+    margin: 1em 0;
     line-height: 2;
 }
 
 h2, .sub {
     font-family: 'Space Mono', monospace;
-    font-size: 1.3em;
+    font-size: calc(.7em + 1.5vw);
     font-weight: 400;
 }
 
@@ -176,6 +165,10 @@ a, a:visited, a:hover, a:active {
     );
     text-shadow: var(--text-color-inverse) 4px -4px;
 }
+
+.text--center {
+    text-align: center;
+} 
 
 img {
     display: block;
@@ -202,7 +195,7 @@ img {
 }
 
 .title--hero, .sub--hero {
-    margin-bottom: 48px;
+    margin: 0 0 48px 0;
 }
 
 .cli::before {
@@ -236,7 +229,7 @@ img {
 
 .img--about {
     position: relative;
-    top: calc(30px + 1.5vw);
+    top: calc(30px + 4vw);
     z-index: -1;
     width: 70%;
     max-width: 600px;
@@ -261,7 +254,7 @@ img {
 
 .card--article {
     padding: 1em 1.5em;
-    max-width: 570px;
+    max-width: 550px;
 }
 
 .card--showcase {
@@ -302,18 +295,11 @@ img {
 }
 
 @media only screen and (min-width: 1024px) {
-    h1 {
-        font-size: 5em;
-    }
-
-    h2, .sub {
-        font-size: 2em;
-    }
-
     .title--hero, .sub--hero {
-        margin-bottom: 80px;
+        margin: 0 0 80px 0;
     }    
 
+    /* Need fix */
     .cli::after {
         width: 15px;
         height: 1.5rem;
