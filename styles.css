@@ -58,7 +58,7 @@ body {
     background: var(--bg-color);
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     color: var(--text-color);
 }
 
@@ -157,6 +157,10 @@ h2, .sub {
     font-family: 'Space Mono', monospace;
     font-size: calc(1em + 1vw);
     font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
 }
 
 b {
@@ -263,9 +267,9 @@ img {
     margin: 2rem auto;
 }
 
-.card--article {
+.card--about {
     padding: 1em var(--space-side);
-    max-width: 550px;
+    max-width: 600px;
 }
 
 .card--showcase {
