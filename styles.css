@@ -31,15 +31,15 @@
 :root {
     --color-dark: #222831;
     --color-light: white;
-    --bg-color: rgb(255, 93, 38);
-    /* Each var is a RGB value for complex calcs */
-    --text-color-R: 34;
-    --text-color-G: 40;
-    --text-color-B: 49;
     --text-color: rgb(
         var(--text-color-R),
         var(--text-color-G),
         var(--text-color-B)
+    );
+    --text-color-inverse: rgb(
+        calc(255 - var(--text-color-R)),
+        calc(255 - var(--text-color-G)),
+        calc(255 - var(--text-color-B))
     );
     --space-side: calc(1rem + 4vw);
 }
@@ -177,12 +177,8 @@ a, a:visited, a:hover, a:active {
 }
 
 .text--shadow-inverse {
-    --text-color-inverse: rgb(
-        calc(255 - var(--text-color-R)),
-        calc(255 - var(--text-color-G)),
-        calc(255 - var(--text-color-B))
-    );
-    text-shadow: var(--text-color-inverse) 4px -4px;
+    text-shadow: var(--text-color-inverse) .08em -.08em;
+    transition: all .5s ease-in-out;
 }
 
 .text--center {
