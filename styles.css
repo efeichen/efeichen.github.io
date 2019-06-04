@@ -176,6 +176,7 @@ a, a:visited, a:hover, a:active {
     color: inherit;
 }
 
+/* Integrate this into a heading style? */
 .text--shadow-inverse {
     text-shadow: var(--text-color-inverse) .08em -.08em;
     transition: all .5s ease-in-out;

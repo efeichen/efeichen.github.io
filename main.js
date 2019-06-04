@@ -1,4 +1,6 @@
 (() => {
+
+    // May want to change light & dark colors as well (or switch them).
     const COLORS_DB = [
         {
             bgColor: '#FF5D26',
