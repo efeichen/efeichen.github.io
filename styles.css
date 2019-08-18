@@ -198,7 +198,8 @@ img {
 }
 
 .navbar__menu a:hover {
-    text-decoration: underline;
+    color: var(--bg-color);
+    transition: color .3s;
 }
 
 .logo {
